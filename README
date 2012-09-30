@@ -2,9 +2,9 @@ NAME
     HTML::Escape - Extremely fast HTML escape
 
 SYNOPSIS
-        use HTML::Escape qw/html_escape/;
+        use HTML::Escape qw/escape_html/;
 
-        html_escape("<^o^>");
+        escape_html("<^o^>");
 
 DESCRIPTION
     This module escapes HTML's special chars. It's same as PHP's
@@ -12,6 +12,11 @@ DESCRIPTION
 
     This module uses XS for better performance. And also provides pure perl
     version.
+
+FAQ
+    Is there a unescape_html?
+        No. Unescaping HTML needs a lot of code, gfx don't want to do it.
+        Please use HTML::Entities for it.
 
 BENCHMARK
                          Rate HTML::Entities   HTML::Escape

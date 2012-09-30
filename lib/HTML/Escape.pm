@@ -2,7 +2,7 @@ package HTML::Escape;
 use strict;
 use warnings;
 use 5.008008;
-our $VERSION = '0.01';
+our $VERSION = '1.00';
 use parent qw/Exporter/;
 
 our $TESTING_PERL_ONLY;
@@ -21,7 +21,7 @@ if ($TESTING_PERL_ONLY) {
     require 'HTML/Escape/PurePerl.pm' # not to create the namespace
 }
 
-our @EXPORT = qw/html_escape/;
+our @EXPORT = qw/escape_html/;
 
 1;
 __END__
@@ -34,9 +34,9 @@ HTML::Escape - Extremely fast HTML escape
 
 =head1 SYNOPSIS
 
-    use HTML::Escape qw/html_escape/;
+    use HTML::Escape qw/escape_html/;
 
-    html_escape("<^o^>");
+    escape_html("<^o^>");
 
 =head1 DESCRIPTION
 
@@ -44,6 +44,17 @@ This module escapes HTML's special chars. It's same as PHP's htmlspecialchars.
 
 This module uses XS for better performance.
 And also provides pure perl version.
+
+=head1 FAQ
+
+=over 4
+
+=item Is there a unescape_html?
+
+No. Unescaping HTML needs a lot of code, gfx don't want to do it.
+Please use L<HTML::Entities> for it.
+
+=back
 
 =head1 BENCHMARK
 

@@ -35,14 +35,15 @@
          "requires" : {
             "Exporter" : "0",
             "XSLoader" : "0",
-            "parent" : "0"
+            "parent" : "0",
+            "perl" : "5.008008"
          }
       }
    },
    "provides" : {
       "HTML::Escape" : {
          "file" : "lib/HTML/Escape.pm",
-         "version" : "0.01"
+         "version" : "1.00"
       },
       "HTML::Escape::PurePerl" : {
          "file" : "lib/HTML/Escape/PurePerl.pm",
@@ -55,5 +56,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.01"
+   "version" : "1.00"
 }
