@@ -1,0 +1,34 @@
+NAME
+    HTML::Escape - Extremely fast HTML escape
+
+SYNOPSIS
+        use HTML::Escape qw/html_escape/;
+
+        html_escape("<^o^>");
+
+DESCRIPTION
+    This module escapes HTML's special chars. It's same as PHP's
+    htmlspecialchars.
+
+    This module uses XS for better performance. And also provides pure perl
+    version.
+
+BENCHMARK
+                         Rate HTML::Entities   HTML::Escape
+        HTML::Entities 14.0/s             --           -91%
+        HTML::Escape    150/s           975%             --
+
+AUTHOR
+    Goro Fuji
+
+    Tokuhiro Matsuno <tokuhirom AAJKLFJEF@ GMAIL COM>
+
+SEE ALSO
+    Text::Xslate, HTML::Entities
+
+LICENSE
+    Copyright (C) Tokuhiro Matsuno
+
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
