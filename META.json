@@ -43,7 +43,7 @@
    "provides" : {
       "HTML::Escape" : {
          "file" : "lib/HTML/Escape.pm",
-         "version" : "1.01"
+         "version" : "1.02"
       },
       "HTML::Escape::PurePerl" : {
          "file" : "lib/HTML/Escape/PurePerl.pm",
@@ -56,5 +56,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "1.01"
+   "version" : "1.02"
 }
