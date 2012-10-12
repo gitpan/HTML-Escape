@@ -7,7 +7,7 @@ build_requires:
   Test::More: 0.98
   Test::Requires: 0
 configure_requires:
-  Devel::PPort: 3.06
+  Devel::PPPort: 3.06
   Module::Build: 0.38
 dynamic_config: 0
 generated_by: 'Module::Build version 0.4001, CPAN::Meta::Converter version 2.120921'
@@ -22,7 +22,7 @@ no_index:
 provides:
   HTML::Escape:
     file: lib/HTML/Escape.pm
-    version: 1.03
+    version: 1.04
   HTML::Escape::PurePerl:
     file: lib/HTML/Escape/PurePerl.pm
     version: 0
@@ -33,4 +33,4 @@ requires:
   perl: 5.008008
 resources:
   license: http://dev.perl.org/licenses/
-version: 1.03
+version: 1.04
