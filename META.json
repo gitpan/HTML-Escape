@@ -28,6 +28,7 @@
       },
       "configure" : {
          "requires" : {
+            "Devel::PPort" : "3.06",
             "Module::Build" : "0.38"
          }
       },
@@ -43,7 +44,7 @@
    "provides" : {
       "HTML::Escape" : {
          "file" : "lib/HTML/Escape.pm",
-         "version" : "1.02"
+         "version" : "1.03"
       },
       "HTML::Escape::PurePerl" : {
          "file" : "lib/HTML/Escape/PurePerl.pm",
@@ -56,5 +57,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "1.02"
+   "version" : "1.03"
 }
