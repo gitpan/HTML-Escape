@@ -4,7 +4,7 @@
       "Tokuhiro Matsuno E<lt>tokuhirom AAJKLFJEF@ GMAIL COME<gt>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Module::Build version 0.4001, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -21,6 +21,7 @@
    "prereqs" : {
       "build" : {
          "requires" : {
+            "Devel::PPPort" : "3.20",
             "ExtUtils::CBuilder" : "0",
             "Test::More" : "0.98",
             "Test::Requires" : "0"
@@ -28,8 +29,8 @@
       },
       "configure" : {
          "requires" : {
-            "Devel::PPPort" : "3.06",
-            "Module::Build" : "0.38"
+            "Devel::PPPort" : "3.20",
+            "Module::Build" : "0.4003"
          }
       },
       "runtime" : {
@@ -44,7 +45,7 @@
    "provides" : {
       "HTML::Escape" : {
          "file" : "lib/HTML/Escape.pm",
-         "version" : "1.04"
+         "version" : "1.05"
       },
       "HTML::Escape::PurePerl" : {
          "file" : "lib/HTML/Escape/PurePerl.pm",
@@ -57,5 +58,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "1.04"
+   "version" : "1.05"
 }

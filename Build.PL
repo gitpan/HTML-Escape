@@ -2,20 +2,41 @@ use strict;
 use warnings;
 use Module::Build;
 
-use Devel::PPPort;
-Devel::PPPort::WriteFile("lib/HTML/ppport.h");
 
-my $build = Module::Build->new(
+my $class = Module::Build->subclass(
+  code => q{
+    use Devel::PPPort;
+
+    sub ACTION_build {
+        my $self = shift;
+        $self->depends_on('ppport_h');
+        $self->SUPER::ACTION_build;
+    }
+
+    sub ACTION_ppport_h {
+        my $self = shift;
+        my $filepath = 'lib/HTML/ppport.h';
+        unless (-e $filepath) {
+            print "Writing $filepath\n";
+            Devel::PPPort::WriteFile($filepath);
+        }
+        $self->add_to_cleanup($filepath);
+    }
+  },
+);
+
+my $build = $class->new(
     license              => 'perl',
     dynamic_config       => 0,
 
     build_requires       => {
         'Test::More' => '0.98',
         'Test::Requires' => 0,
+        'Devel::PPPort'  => '3.20',
     },
     configure_requires   => {
-        'Module::Build' => '0.38',
-        'Devel::PPPort'  => '3.06',
+        'Module::Build' => '0.4003',
+        'Devel::PPPort'  => '3.20',
     },
     requires             => {
         'Exporter'                      => '0',
