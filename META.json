@@ -23,6 +23,7 @@
          "requires" : {
             "Devel::PPPort" : "3.20",
             "ExtUtils::CBuilder" : "0",
+            "Module::Build::Pluggable::PPPort" : "0.01",
             "Test::More" : "0.98",
             "Test::Requires" : "0"
          }
@@ -30,7 +31,8 @@
       "configure" : {
          "requires" : {
             "Devel::PPPort" : "3.20",
-            "Module::Build" : "0.4003"
+            "Module::Build" : "0.4003",
+            "Module::Build::Pluggable::PPPort" : "0.01"
          }
       },
       "runtime" : {
@@ -45,7 +47,7 @@
    "provides" : {
       "HTML::Escape" : {
          "file" : "lib/HTML/Escape.pm",
-         "version" : "1.05"
+         "version" : "1.06"
       },
       "HTML::Escape::PurePerl" : {
          "file" : "lib/HTML/Escape/PurePerl.pm",
@@ -58,5 +60,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "1.05"
+   "version" : "1.06"
 }
