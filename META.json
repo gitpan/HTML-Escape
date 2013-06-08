@@ -1,13 +1,11 @@
 {
    "abstract" : "Extremely fast HTML escape",
    "author" : [
-      "Tokuhiro Matsuno E<lt>tokuhirom AAJKLFJEF@ GMAIL COME<gt>"
+      "Goro Fuji"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921",
-   "license" : [
-      "perl_5"
-   ],
+   "generated_by" : "Minilla/v0.4.8",
+   "license" : "perl_5",
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
@@ -15,7 +13,13 @@
    "name" : "HTML-Escape",
    "no_index" : {
       "directory" : [
-         "inc"
+         "t",
+         "xt",
+         "inc",
+         "share",
+         "eg",
+         "examples",
+         "author"
       ]
    },
    "prereqs" : {
@@ -23,16 +27,26 @@
          "requires" : {
             "Devel::PPPort" : "3.20",
             "ExtUtils::CBuilder" : "0",
-            "Module::Build::Pluggable::PPPort" : "0.01",
+            "Module::Build::Pluggable::PPPort" : "0.04",
             "Test::More" : "0.98",
             "Test::Requires" : "0"
          }
       },
       "configure" : {
          "requires" : {
+            "CPAN::Meta" : "0",
+            "CPAN::Meta::Prereqs" : "0",
             "Devel::PPPort" : "3.20",
-            "Module::Build" : "0.4003",
+            "Module::Build" : "0.38",
             "Module::Build::Pluggable::PPPort" : "0.01"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Test::CPAN::Meta" : "0",
+            "Test::MinimumVersion" : "0.10108",
+            "Test::Pod" : "1.41",
+            "Test::Spellunker" : "v0.2.7"
          }
       },
       "runtime" : {
@@ -47,18 +61,26 @@
    "provides" : {
       "HTML::Escape" : {
          "file" : "lib/HTML/Escape.pm",
-         "version" : "1.06"
+         "version" : "1.07"
       },
       "HTML::Escape::PurePerl" : {
-         "file" : "lib/HTML/Escape/PurePerl.pm",
-         "version" : 0
+         "file" : "lib/HTML/Escape/PurePerl.pm"
       }
    },
    "release_status" : "stable",
    "resources" : {
-      "license" : [
-         "http://dev.perl.org/licenses/"
-      ]
+      "bugtracker" : {
+         "web" : "https://github.com/tokuhirom/HTML-Escape/issues"
+      },
+      "homepage" : "https://github.com/tokuhirom/HTML-Escape",
+      "repository" : {
+         "url" : "git://github.com/tokuhirom/HTML-Escape.git",
+         "web" : "https://github.com/tokuhirom/HTML-Escape"
+      }
    },
-   "version" : "1.06"
+   "version" : "1.07",
+   "x_contributors" : [
+      "Fuji, Goro <fuji.goro@dena.jp>",
+      "tokuhirom <tokuhirom@gmail.com>"
+   ]
 }
